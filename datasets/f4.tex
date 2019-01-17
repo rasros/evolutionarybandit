@@ -1,0 +1,73 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.951\fwidth,
+height=\fheight,
+at={(0\fwidth,0\fheight)},
+scale only axis,
+xmode=log,
+xmin=0,
+xmax=4000,
+xminorticks=true,
+xlabel style={font=\color{white!15!black}},
+xlabel={Time [t]},
+ymin=0,
+ymax=0.4,
+ylabel style={font=\color{white!15!black}},
+ylabel={Cumulative regret [10 k]},
+axis background/.style={fill=white},
+legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1]
+  table[row sep=crcr]{%
+0	0\\
+200	0.0172192291163506\\
+400	0.0345303844611237\\
+600	0.0514710883524444\\
+800	0.0681491874994112\\
+1000	0.0845064908760359\\
+1200	0.100515979022153\\
+1400	0.116399288119901\\
+1600	0.132025391635787\\
+1800	0.147494911741031\\
+2000	0.162754805907393\\
+2200	0.178182757737577\\
+2400	0.193258802855478\\
+2600	0.208182574491924\\
+2800	0.223228646322008\\
+3000	0.238010166649235\\
+3200	0.25279151224993\\
+3400	0.267818578985854\\
+3600	0.282363555773211\\
+3800	0.296906139455851\\
+4000	0.311507232393196\\
+};
+\addlegendentry{Bandit}
+
+\addplot [color=mycolor2, dashed]
+  table[row sep=crcr]{%
+0	0\\
+400	0.0343446013398764\\
+800	0.0691654248558363\\
+1200	0.103449399984257\\
+1600	0.136951209149078\\
+2000	0.169597918244331\\
+2400	0.201480887430739\\
+2800	0.232784222248283\\
+3200	0.26334047932308\\
+3600	0.293616398169763\\
+4000	0.323670134288808\\
+};
+\addlegendentry{Baseline}
+
+\end{axis}
+\end{tikzpicture}%

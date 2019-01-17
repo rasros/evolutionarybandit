@@ -1,0 +1,71 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.951\fwidth,
+height=\fheight,
+at={(0\fwidth,0\fheight)},
+scale only axis,
+xmin=0,
+xmax=4000,
+xlabel style={font=\color{white!15!black}},
+xlabel={Time [t]},
+ymin=0,
+ymax=0.4,
+ylabel style={font=\color{white!15!black}},
+ylabel={Fitness [P(reward)]},
+axis background/.style={fill=white},
+legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1]
+  table[row sep=crcr]{%
+0	0.00917816946281966\\
+200	0.130517232297524\\
+400	0.149522356299324\\
+600	0.141517445636923\\
+800	0.148170839740001\\
+1000	0.155078440036609\\
+1200	0.162098462446313\\
+1400	0.168735477391334\\
+1600	0.174755649941283\\
+1800	0.180764788944577\\
+2000	0.185857114220246\\
+2200	0.190384543348415\\
+2400	0.194754467276701\\
+2600	0.199087052965594\\
+2800	0.202961556275649\\
+3000	0.206609864744584\\
+3200	0.209782541105968\\
+3400	0.212610523424655\\
+3600	0.215542465888013\\
+3800	0.218744269817448\\
+4000	0.221212865078536\\
+};
+\addlegendentry{Bandit}
+
+\addplot [color=mycolor2, dashed]
+  table[row sep=crcr]{%
+0	0.00926223698584167\\
+400	0.13261301186034\\
+800	0.148590121266169\\
+1200	0.13766650843323\\
+1600	0.144009527422945\\
+2000	0.151975530230469\\
+2400	0.160364215516523\\
+2800	0.168803770463823\\
+3200	0.176925548454362\\
+3600	0.184489196413556\\
+4000	0.190802088667812\\
+};
+\addlegendentry{Baseline}
+
+\end{axis}
+\end{tikzpicture}%
